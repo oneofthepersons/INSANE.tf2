@@ -27,10 +27,10 @@ endif()
 #//////////////////////////////////////////////////
 target_link_libraries(Insane_tf2 PRIVATE d3d9 d3dx9)
 target_include_directories(Insane_tf2 PRIVATE
-    "C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include"
+    "${CMAKE_SOURCE_DIR}/external/dx9/includes"
 )
 target_link_directories(Insane_tf2 PRIVATE
-    "C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Lib/x64"
+    "${CMAKE_SOURCE_DIR}/external/dx9/lib"
 )
 
 

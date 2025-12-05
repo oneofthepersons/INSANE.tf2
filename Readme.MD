@@ -5,7 +5,6 @@
 
 ### ⚙️ **Requirments to build** 
 - MSVC compiler
-- Dx9 SDK ( adjust path in CMakeLists.txt )
 
 ---
 ### ✅ **How to build**
@@ -17,6 +16,11 @@
 ### 🗿 **How to Run**
 1. Don't.
 2. Use any manual map injector.
+
+---
+### **How to use**
+1. Don't
+2. Dll should be in the `./Output/Release/` and `./Output/Debug/` folder depending on whether you use `BuildDebug.bat` or `BuildRelease.bat`. 
 
 
 NOTE : It might be rough around the edges and some features might not working at all, I am not very smart. 
