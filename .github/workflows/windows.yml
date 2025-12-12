@@ -1,0 +1,23 @@
+# CI: build with MSVC (Visual Studio) using CMake
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure (Visual Studio generator)
+        run: cmake -G "Visual Studio 17 2022" -A x64 -S . -B Build
+
+      - name: Build (Release)
+        run: cmake --build build --config Release
+
+      - name: Upload Release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Insane_tf2-Release
+          path: Output/Release/**
